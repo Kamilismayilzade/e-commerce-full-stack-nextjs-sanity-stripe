@@ -3,13 +3,13 @@ import { HeroBanner, Product, Cart, Navbar, Footer, FooterBanner, Layout } from 
 import { client } from '../../library/client'
 
 
-const Home = () => {
+const Home = ({ allProducts, allBanner }) => {
 
   return (
 
     <>
     
-      <HeroBanner />
+      <HeroBanner heroBanner = {allBanner.length && allBanner[0]} />
 
       <div className='products-heading'>
         <h2>Best Selling Products</h2>
@@ -17,8 +17,8 @@ const Home = () => {
       </div>
 
       <div className='products-container'>
-        {['Product1', 'Product2'].map((product) => (
-          product
+        {allProducts.map((product) => (
+          product.name
         ))}
       </div>
 
