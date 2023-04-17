@@ -18,7 +18,7 @@ const Home = ({ allProducts, allBanner }) => {
 
       <div className='products-container'>
         {allProducts.map((product) => (
-          product.name
+          <Product key={product._id} product={product} />
         ))}
       </div>
 
