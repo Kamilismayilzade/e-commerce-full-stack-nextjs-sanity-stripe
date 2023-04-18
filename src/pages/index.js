@@ -22,7 +22,7 @@ const Home = ({ allProducts, allBanner }) => {
         ))}
       </div>
 
-      <FooterBanner />
+      <FooterBanner footerBanner = {allBanner.length && allBanner[0]} />
 
     </>
 
